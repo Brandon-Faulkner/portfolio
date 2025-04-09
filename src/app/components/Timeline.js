@@ -6,32 +6,46 @@ import { FaBriefcase, FaGraduationCap, FaTrophy, FaCode } from 'react-icons/fa';
 const achievements = [
     {
         icon: FaGraduationCap,
-        date: '2020',
-        title: 'Computer Science Degree',
-        description: 'Graduated with honors in Computer Science',
-        category: 'education'
-    },
-    {
-        icon: FaBriefcase,
         date: '2021',
-        title: 'Software Developer',
-        description: 'Started career as a Full Stack Developer',
-        category: 'work'
-    },
-    {
-        icon: FaTrophy,
-        date: '2022',
-        title: 'Team Achievement',
-        description: 'Led successful launch of major project',
-        category: 'achievement'
+        title: 'AAS in Computer Programming',
+        description: 'Graduated with a 4.0 GPA',
+        category: 'education'
     },
     {
         icon: FaCode,
         date: '2023',
-        title: 'Technical Achievement',
-        description: 'Contributed to open source projects',
+        title: 'Cana CAM',
+        description: 'Developed a web app for a local business',
         category: 'technical'
-    }
+    },
+    {
+        icon: FaCode,
+        date: '2024',
+        title: 'LaunchPad',
+        description: 'Developed a web app for a local business',
+        category: 'technical'
+    },
+    {
+        icon: FaCode,
+        date: '2024',
+        title: 'Cana Goals',
+        description: 'Developed a web app for a local business',
+        category: 'technical'
+    },
+    {
+        icon: FaCode,
+        date: '2025',
+        title: 'CookieTrack',
+        description: 'Developed a full-stack web app',
+        category: 'technical'
+    },
+    {
+        icon: FaGraduationCap,
+        date: '2025',
+        title: 'BS in Computer Science',
+        description: 'Graduated with honors',
+        category: 'education'
+    },
 ];
 
 const Timeline = () => {
@@ -44,9 +58,9 @@ const Timeline = () => {
 
     const categories = [
         { id: 'all', label: 'All' },
-        { id: 'work', label: 'Work' },
+        //{ id: 'work', label: 'Work' },
         { id: 'education', label: 'Education' },
-        { id: 'achievement', label: 'Achievements' },
+        //{ id: 'achievement', label: 'Achievements' },
         { id: 'technical', label: 'Technical' }
     ];
 

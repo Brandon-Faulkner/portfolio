@@ -17,9 +17,9 @@ const Terminal = () => {
         '{',
         '    name: "Brandon Faulkner",',
         '    title: "Software Developer",',
-        '    experience: "10000+ years",',
-        '    skills: ["JavaScript", "React", "Node.js", "Python"],',
-        '    passion: "Building elegant solutions to complex problems"',
+        '    experience: "College Graduate",',
+        '    skills: ["Next.js", "Node.js", "Express", "and more..."],',
+        '    passion: "Turning lines of code into solutions to problems"',
         '}',
         '',
         'C:\\Users\\Brandon> _'
@@ -42,14 +42,13 @@ const Terminal = () => {
             transition={{ duration: 0.5 }}
             className="overflow-hidden rounded-lg shadow-lg"
         >
-            {/* Windows terminal title bar */}
             <div className="bg-windows-title px-4 py-2 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                    <img 
-                        src="/icons/terminal-icon.svg" 
-                        alt="Windows CMD Icon" 
+                    <img
+                        src="/icons/terminal-icon.svg"
+                        alt="Windows CMD Icon"
                         className="w-4 h-4"
-                        onError={(e) => e.target.style.display = 'none'} 
+                        onError={(e) => e.target.style.display = 'none'}
                     />
                     <span className="text-primary-text text-sm">Command Prompt</span>
                 </div>
@@ -60,7 +59,6 @@ const Terminal = () => {
                 </div>
             </div>
 
-            {/* Terminal content */}
             <div className="bg-windows-content p-4 font-mono text-sm">
                 <pre className="whitespace-pre-wrap text-windows-text">{text}</pre>
                 <span className="animate-pulse text-windows-text">█</span>
@@ -84,14 +82,20 @@ const About = () => {
                     <Parallax offset={50}>
                         <div className="space-y-6">
                             <p className="text-lg text-secondary-text">
-                                I am a passionate Software Developer with a strong foundation in computer science 
-                                and a drive for creating innovative solutions. My journey in technology began with 
-                                a curiosity about how things work, which led me to pursue a career in software development.
+                                I am a soon-to-be computer science graduate from The University of Texas at Arlington in May 2025.
+                                I am passionate about turning lines of code into things that bring solutions to people's problems.
+                                I enjoy working the most on front-end or back-end web development, turning ideas into clean and
+                                responsive user experiences using HTML, CSS, JavaScript, and modern frameworks like Next.js.
+                                I also have experience working with back-end frameworks such as Express, leveraged with Node.js.
                             </p>
                             <p className="text-lg text-secondary-text">
-                                With expertise in modern web technologies and a keen eye for detail, I specialize 
-                                in building scalable, efficient, and user-friendly applications. I believe in 
-                                continuous learning and staying up-to-date with the latest industry trends.
+                                What excites me the most about being a developer is being able to creatively think through different
+                                ways to approach and create a solution. I love being able to push through late nights or chase those
+                                random "ah-hah!" moments when you finally think of a solution to a code problem. I live for it.
+                            </p>
+                            <p className="text-lg text-secondary-text">
+                                Right now, I'm looking for opportunities in software development around the Dallas/Fort Worth, TX area.
+                                I have a genuine love for what I do and building things that matter, and I am ready to bring that mindset with me wherever I go.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <motion.div
@@ -99,14 +103,14 @@ const About = () => {
                                     className="glass p-4 rounded-lg border border-card-border"
                                 >
                                     <h3 className="font-bold text-xl mb-2 text-accent">Education</h3>
-                                    <p className="text-secondary-text">BS Computer Science<br/>AAS Computer Programing</p>
+                                    <p className="text-secondary-text">AAS Computer Programing<br />BS Computer Science</p>
                                 </motion.div>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     className="glass p-4 rounded-lg border border-card-border"
                                 >
                                     <h3 className="font-bold text-xl mb-2 text-accent">Experience</h3>
-                                    <p className="text-secondary-text">100000+ Years in Development</p>
+                                    <p className="text-secondary-text">College Graduate</p>
                                 </motion.div>
                             </div>
                         </div>

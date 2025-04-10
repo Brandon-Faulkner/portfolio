@@ -49,7 +49,7 @@ const Hero = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
             Hi, I'm <span className="text-accent">Brandon Faulkner</span>
           </h1>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-secondary-text mb-8 h-[3.5rem]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl text-secondary-text mb-8 h-14">
             <span className="border-r-2 border-accent pr-1">{text}</span>
           </h2>
           <p className="text-lg text-secondary-text mb-8 max-w-2xl">
@@ -114,7 +114,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className="flex-1 relative"
         >
-          <div className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] relative mx-auto">
+          <div className="w-80 h-80 sm:w-96 sm:h-96 relative mx-auto">
             <motion.div
               animate={{
                 scale: [1, 1.05, 1],

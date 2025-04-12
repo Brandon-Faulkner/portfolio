@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="relative bg-page-bg text-primary-text backdrop-blur-sm">
+      <main className="relative bg-page-bg text-primary-text backdrop-blur-sm overflow-x-hidden">
         <Hero />
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Contact />
       </main>
       <Analytics />

@@ -11,11 +11,13 @@
   --color-gray-700: #242e3d;
   --color-gray-800: #1e2939;
   --color-gray-900: #101828;
+  --color-gray-950: #0e1624;
   
   --color-blue-400: #3b82f6;
   --color-blue-500: #155dfc;
   --color-blue-700: #1447e6;
 
+  --color-white-100: #e6e6e6;
   --color-white-800: #cccccc;
   --color-white: #ffffff;
   --color-black-100: #0c0c0c;
@@ -24,6 +26,7 @@
   
   /* Theme tokens */
   --color-page-bg: var(--color-white);
+  --color-section-alt: var(--color-white-100);
   --color-card-bg: var(--color-gray-200);
   --color-inner-card-bg: var(--color-gray-100);
   --color-card-border: var(--color-gray-300);
@@ -70,6 +73,7 @@
 @layer theme {
   .dark {
     --color-page-bg: var(--color-gray-900);
+    --color-section-alt: var(--color-gray-950);
     --color-card-bg: var(--color-gray-800);
     --color-inner-card-bg: var(--color-gray-500);
     --color-card-border: var(--color-gray-500);

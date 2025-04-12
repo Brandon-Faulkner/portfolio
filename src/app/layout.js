@@ -1,7 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import ThemeSwitcher from './components/ThemeSwitcher';
-import ScrollProgress from './components/ScrollProgress';
+import ThemeSwitcher from './components/utils/ThemeSwitcher';
+import ScrollProgress from './components/utils/ScrollProgress';
 
 const inter = Inter({ subsets: ['latin'] });
 

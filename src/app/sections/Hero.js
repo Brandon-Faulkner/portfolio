@@ -3,16 +3,14 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Parallax from '../components/animations/Parallax';
+import useMediaQuery from '../components/utils/MediaQuery';
+import { hero } from '@/data/about';
 
 export default function Hero() {
+  const isMobile = useMediaQuery('(max-width: 640px)');
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
-  const phrases = [
-    'Software Developer',
-    'Dark mode or bust',
-    'Readable is reliable',
-    '404: Boring not found'
-  ];
+  const phrases = hero.phrases;
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -31,7 +29,7 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-      <Parallax offset={200}>
+      <Parallax offset={isMobile ? 150 : 500}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-20 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -55,8 +53,7 @@ export default function Hero() {
               <span className="border-r-2 border-accent pr-1">{text}</span>
             </h2>
             <p className="text-lg text-secondary-text mb-8 max-w-2xl">
-              I create elegant solutions to complex problems using modern technologies.
-              Passionate about crafting clean, efficient code and building exceptional user experiences.
+              {hero.tagline}
             </p>
             <div className="flex gap-4 justify-center lg:justify-start">
               <motion.a
@@ -90,10 +87,7 @@ export default function Hero() {
             </div>
 
             <div className="mt-12 flex gap-6 justify-center lg:justify-start">
-              {[
-                { href: "https://github.com/Brandon-Faulkner", label: "GitHub", delay: 0 },
-                { href: "https://linkedin.com/in/brandon-m-faulkner", label: "LinkedIn", delay: 0.1 },
-              ].map((social, index) => (
+              {hero.socials.map((social, index) => (
                 <motion.a
                   key={social.label}
                   href={social.href}

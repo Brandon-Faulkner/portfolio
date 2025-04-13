@@ -23,8 +23,8 @@ export default function TimelineCard({ index, CardIcon, date, title, description
                         animate={{ scale: hoveredIndex === index ? 1.02 : 1 }}
                     >
                         <CardIcon className="text-accent text-2xl mb-4" />
-                        <h3 className="text-xl font-bold mb-2 text-accent">{title}</h3>
-                        <p className="text-secondary-text">{description}</p>
+                        <h3 className="text-xl max-sm:text-base font-bold mb-2 text-accent">{title}</h3>
+                        <p className="max-sm:text-xs text-secondary-text">{description}</p>
 
                         <motion.div
                             className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-400 to-blue-500"

@@ -4,6 +4,7 @@ import FadeInWhenVisible from '../components/animations/FadeInWhenVisible';
 import Parallax from '../components/animations/Parallax';
 import Terminal from '../components/Terminal';
 import Timeline from '../components/Timeline';
+import { about } from '@/data/about';
 
 export default function About() {
     return (
@@ -21,18 +22,13 @@ export default function About() {
                         <Parallax offset={50}>
                             <div className="space-y-6">
                                 <p className="text-lg text-secondary-text">
-                                    I'm a computer science student graduating from UT Arlington in May 2025, passionate
-                                    about building solutions through code. I enjoy front-end and back-end web development,
-                                    especially creating clean, responsive interfaces with HTML, CSS, JavaScript,
-                                    and frameworks like Next.js and Express.
+                                    {about.bio[0]}
                                 </p>
                                 <p className="text-lg text-secondary-text">
-                                    What drives me is the creative process—thinking through problems, chasing solutions,
-                                    and those late-night "aha!" moments that make it all worth it.
+                                    {about.bio[1]}
                                 </p>
                                 <p className="text-lg text-secondary-text">
-                                    I'm currently seeking software development roles in the Dallas/Fort Worth area, eager
-                                    to bring my energy and love for building meaningful things to a great team.
+                                    {about.bio[2]}
                                 </p>
                                 <div className="flex flex-wrap gap-4">
                                     <motion.div
@@ -47,7 +43,7 @@ export default function About() {
                                         className="glass p-4 rounded-lg border border-card-border"
                                     >
                                         <h3 className="font-bold text-xl mb-2 text-accent">Experience</h3>
-                                        <p className="text-secondary-text">College Graduate</p>
+                                        <p className="text-secondary-text">{about.experience}</p>
                                     </motion.div>
                                 </div>
                             </div>

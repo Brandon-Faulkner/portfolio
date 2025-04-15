@@ -6,7 +6,7 @@ import ProjectCard from '../components/cards/ProjectCard';
 export default function Projects() {
   return (
     <section id="projects">
-      <div className="bg-section-alt max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="bg-section-alt rounded-xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

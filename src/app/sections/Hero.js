@@ -125,7 +125,7 @@ export default function Hero() {
               />
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-card-border">
                 <Image
-                  src="/images/Headshot.jpg"
+                  src="/images/headshot.webp"
                   width={3024}
                   height={4032}
                   alt='Image of Brandon Faulkner'

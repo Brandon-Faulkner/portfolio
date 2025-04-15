@@ -14,9 +14,19 @@ export default function ProjectCard({ index, title, description, image, tags, gi
             className="bg-card-bg rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
         >
             <div className="relative h-48 bg-card-border">
-                <div className="absolute inset-0 flex items-center justify-center text-secondary-text">
-                    Project Screenshot
-                </div>
+                {image ? (
+                    <Image
+                        src={image}
+                        alt={`Screenshot of ${title}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, max-width: 1024px) 50vw, 640px"
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-secondary-text">
+                        No Preview Available
+                    </div>
+                )}
             </div>
             <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{title}</h3>

@@ -58,7 +58,7 @@ export default function About() {
                             My Journey
                         </h3>
                         <p className="text-secondary-text max-w-2xl mx-auto">
-                            Here's a timeline of my professional journey and key achievements along the way.
+                            Here&apos;s a timeline of my professional journey and key achievements along the way.
                         </p>
                     </div>
 

@@ -15,7 +15,7 @@ export default function ContactInfo() {
             <div>
                 <h3 className="text-xl font-bold mb-4">Contact Information</h3>
                 <p className="text-secondary-text mb-6">
-                    Feel free to reach out to me through any of these platforms. I'll get back to you as soon as possible.
+                    Feel free to reach out to me through any of these platforms. I&apos;ll get back to you as soon as possible.
                 </p>
             </div>
 

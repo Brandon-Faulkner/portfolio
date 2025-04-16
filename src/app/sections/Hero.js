@@ -43,7 +43,7 @@ export default function Hero() {
               </motion.div>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Hi, I'm <span className="text-accent">Brandon Faulkner</span>
+              Hi, I&apos;m <span className="text-accent">Brandon Faulkner</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-secondary-text mb-8 h-14">
               <span className="border-r-2 border-accent pr-1">{text}</span>

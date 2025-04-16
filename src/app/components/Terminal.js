@@ -1,13 +1,14 @@
 'use client';
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import Image from 'next/image';
+import { useState, useEffect, useMemo } from 'react';
 
 export default function Terminal() {
     const [text, setText] = useState('');
     const [currentLine, setCurrentLine] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
 
-    const lines = [
+    const lines = useMemo(() => [
         'C:\\Users\\Brandon> whoami',
         'developer',
         '',
@@ -21,7 +22,7 @@ export default function Terminal() {
         '}',
         '',
         'C:\\Users\\Brandon> _'
-    ];
+    ], []);
 
     useEffect(() => {
         if (isVisible && currentLine < lines.length) {
@@ -43,10 +44,11 @@ export default function Terminal() {
         >
             <div className="bg-windows-title px-4 py-2 flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                    <img
+                    <Image
                         src="/icons/terminal-icon.svg"
                         alt="Windows CMD Icon"
-                        className="w-4 h-4"
+                        width={16}
+                        height={16}
                         onError={(e) => e.target.style.display = 'none'}
                     />
                     <span className="text-primary-text text-sm">Command Prompt</span>

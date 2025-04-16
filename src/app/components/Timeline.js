@@ -32,7 +32,7 @@ export default function Timeline() {
             </div>
 
             <div className="relative">
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-accent opacity-40"></div>
+                <div className="absolute left-1/2 max-sm:left-0.5 transform -translate-x-1/2 h-full w-px bg-accent opacity-40"></div>
 
                 <div className="space-y-12">
                     <AnimatePresence>

@@ -16,8 +16,8 @@ export default function TimelineCard({ index, CardIcon, date, title, description
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
         >
-            <div className={`flex items-center ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-                <div className="w-1/2 px-6">
+            <div className={`flex items-center ${index % 2 === 0 ? 'flex-row-reverse' : ''} max-sm:flex-row-reverse`}>
+                <div className="w-1/2 max-sm:w-full px-6">
                     <motion.div
                         className="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
                         animate={{ scale: hoveredIndex === index ? 1.02 : 1 }}

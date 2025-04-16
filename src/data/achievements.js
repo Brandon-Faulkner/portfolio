@@ -40,7 +40,7 @@ export const achievements = [
         icon: FaGraduationCap,
         date: '2025',
         title: 'BS in Computer Science',
-        description: 'Graduated with honors',
+        description: 'Graduating with honors',
         category: 'education'
     },
 ];

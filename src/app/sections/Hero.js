@@ -2,12 +2,9 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Parallax from '../components/animations/Parallax';
-import useMediaQuery from '../components/utils/MediaQuery';
 import { hero } from '@/data/about';
 
 export default function Hero() {
-  const isMobile = useMediaQuery('(max-width: 640px)');
   const [text, setText] = useState('');
   const [index, setIndex] = useState(0);
   const phrases = hero.phrases;
@@ -29,8 +26,7 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-      <Parallax offset={isMobile ? 150 : 500}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-20 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-20 lg:px-8 flex flex-col max-lg:pb-32 lg:flex-row items-center gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -134,7 +130,6 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
-      </Parallax>
     </section>
   );
 }

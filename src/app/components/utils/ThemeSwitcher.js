@@ -6,26 +6,21 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 const ThemeSwitcher = () => {
   const [isDark, setIsDark] = useState(false);
 
+  // Setup theme on initial load
   useEffect(() => {
-    // Check system preference and saved theme
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    setIsDark(savedTheme === 'dark' || (!savedTheme && prefersDark));
-    document.documentElement.classList.toggle('dark', 
-      savedTheme || (prefersDark ? 'dark' : 'light')
-    );
+    const isDarkMode = savedTheme === 'dark' || (!savedTheme && prefersDark);
+
+    setIsDark(isDarkMode);
+    document.documentElement.classList.toggle('dark', isDarkMode);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDark ? 'dark' : 'light';
-    setIsDark(!isDark);
-    if (newTheme === "dark") {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    const newTheme = isDark ? 'light' : 'dark';
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
     localStorage.setItem('theme', newTheme);
+    setIsDark(!isDark);
   };
 
   return (

@@ -1,12 +1,32 @@
 'use client';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 import ContactForm from '../components/ContactForm';
 import ContactInfo from '../components/ContactInfo';
 
 export default function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted!");
+  const [isLoading, setIsLoading] = useState(false);
+  
+  const handleSubmit = async (data, reset) => {
+    setIsLoading(true);
+    const toastId = toast.loading('Sending message...');
+
+    emailjs.send(
+      "service_vqy2jz7",
+      "template_uvgb0dc",
+      data,
+      "edtdPDBTjZ-oJRfmw",
+    ).then(() => {
+      toast.success('Message sent!', { id: toastId });
+      reset();
+    }).catch((error) => {
+      console.error('EmailJS Error:', error);
+      toast.error('Failed to send message. Try again.', { id: toastId });
+    }).finally(() => {
+      setIsLoading(false);
+    });;
   };
 
   return (
@@ -24,7 +44,7 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <ContactForm handleSubmit={handleSubmit}/>
+          <ContactForm handleSubmit={handleSubmit} isLoading={isLoading} />
           <ContactInfo />
         </div>
       </div>

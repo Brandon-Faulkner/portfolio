@@ -43,6 +43,13 @@ export const achievements = [
         description: 'Graduating with honors',
         category: 'education'
     },
+    {
+        icon: FaCode,
+        date: '2025',
+        title: 'Cana Merch',
+        description: 'Developed a web app for a local business',
+        category: 'technical'
+    },
 ];
 
 export const categories = [

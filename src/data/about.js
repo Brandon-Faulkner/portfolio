@@ -15,7 +15,7 @@ export const hero = {
 
 export const about = {
     bio: [
-        `I'm a computer science student graduating from UT Arlington in May 2025, passionate
+        `I'm a computer science 2025 graduate from UT Arlington, passionate
          about building solutions through code. I enjoy front-end and back-end web development,
          especially creating clean, responsive interfaces with HTML, CSS, JavaScript,
          and frameworks like Next.js and Express.`,
@@ -24,5 +24,5 @@ export const about = {
         `I'm currently seeking software development roles in the Dallas/Fort Worth area, eager
          to bring my energy and love for building meaningful things to a great team.`,
     ],
-    experience: "May 2025 College Graduate"
+    experience: "2025 College Graduate"
 }
